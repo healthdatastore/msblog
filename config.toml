@@ -1,0 +1,9 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = 'Android engineer blog'
+theme = "paper"
+[params]
+    color = 'gray'
+    avatar = 'https://healthdatastore.github.io/cdn/avatar100.jpg'
+    name = 'Maksim Shashkov'
+    bio = 'Android engineer at Avito'
