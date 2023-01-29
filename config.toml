@@ -2,8 +2,22 @@ baseURL = 'https://maxshashkov.tech/'
 languageCode = 'en-us'
 title = 'Android engineer blog'
 theme = "paper"
+
 [params]
     color = 'gray'
     avatar = 'https://healthdatastore.github.io/cdn/avatar100.jpg'
     name = 'Maksim Shashkov'
     bio = 'Android engineer at Avito'
+
+[menu]
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 10
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 10
