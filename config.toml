@@ -1,4 +1,4 @@
-baseURL = 'https://www.maxshashkov.tech/'
+baseURL = 'https://maxshashkov.tech/'
 languageCode = 'en-us'
 title = 'Android engineer blog'
 theme = "paper"
