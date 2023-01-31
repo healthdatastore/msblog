@@ -15,12 +15,12 @@ Thus, we need to connect from our app client located on our local machine (i.e. 
 
 To do this we can type in host's 1 terminal next command:
 
-```
+```sh
 ssh -L 9999:localhost:5432 host2
 ```
 
 Now we can connect from our local machine to remote app. For example, for PostgreSQL it could look like:
 
-```
+```sh
 psql -h localhost -p 9999 -U postgres
 ```
