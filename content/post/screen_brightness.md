@@ -24,7 +24,7 @@ The answer is: "No". Since for each Activity we have a `Window` instance, which 
 
 To control the brightness of your device’s screen without being tied to your app’s lifecycle, you must meet the following conditions:
 
-- the app must be signed as a system, if your target API version is 23 or higher [link](https://developer.android.com/guide/topics/permissions/overview#signature)
+- the app must be signed as a system, if your target API version is 23 or higher ([link](https://developer.android.com/guide/topics/permissions/overview#signature))
 - you should add this permission to the manifest file:
 
 ``` xml
