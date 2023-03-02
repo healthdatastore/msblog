@@ -24,17 +24,16 @@ The answer is: "No". Since for each Activity we have a `Window` instance, which 
 
 To control the brightness of your device’s screen without being tied to your app’s lifecycle, you must meet the following conditions:
 
-- the app must be signed as a system, if your target API version is 23 or higher ([link](https://developer.android.com/guide/topics/permissions/overview#signature))
 - you should add this permission to the manifest file:
 
 ``` xml
 <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
 ```
 
-> ***NOTE:*** adding `tools:ignore="ProtectedPermissions"` only helps to workaround android linter checks. But at runtime for api levels 23 or higher this permission cannot be changed if your app is not signed as a system
+> ***NOTE:*** adding `tools:ignore="ProtectedPermissions"` helps to workaround android linter checks.
 
-- If your app's target sdk version is 23 or higher `Settings.ACTION_MANAGE_WRITE_SETTINGS` permission must be requested at runtime
+- If your app's target sdk version is 23 or higher `Settings.ACTION_MANAGE_WRITE_SETTINGS` intent must be sent at runtime. This permission is so-called "Special permission". The way to request this permission differs from standard runtime permission request. Each special permission has its own check method. For our case it's `Settings.System.canWrite()`.
 
 ### Conclusion
 
-In 99% cases scenario 1 should be sufficient to your needs as an app developer unless you are not a system developer, who creates third-party operating system or a new device.
+In most cases scenario 1 should be sufficient to your needs as an app developer unless you are need the app which can manipulate system screen brightness setting. And here Scenario 2 could be useful.
